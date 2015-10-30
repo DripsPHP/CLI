@@ -35,12 +35,24 @@ class TestCommands extends PHPUnit_Framework_TestCase
         $this->assertEquals(Command::execute($args), $result);
     }
 
+    public function testWithoutInterface()
+    {
+        Command::register("test", TestCommands::class);
+        $this->assertFalse(Command::execute(array()));
+    }
+
     public function testHelp()
     {
         Command::register("test1", TestCommand::class);
         Command::register("test2", TestCommand::class);
         Command::register("test3", TestCommand::class);
         Command::help();
+    }
+
+    public function testUnregister()
+    {
+        Command::register("command", TestCommand::class);
+        Command::unregister("command");
     }
 
     public static function argsProvider()
@@ -50,6 +62,7 @@ class TestCommands extends PHPUnit_Framework_TestCase
             array(["your_file", "test"], false),
             array(["your_file", "doesNotExist", "help"], false),
             array(["my_file", "test", "command1"], true),
+            array(["my_file", "test", "no_command"], false),
             array(["my_file", "test", "command1", "that_is_a_parameter"], true)
         );
     }

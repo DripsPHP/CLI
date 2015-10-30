@@ -29,6 +29,13 @@ class TestConsole extends PHPUnit_Framework_TestCase
         $this->assertEquals($str."\n\r", $content);
     }
 
+    public function testBgColor()
+    {
+        Console::setBgColor("red");
+        Console::writeln("Rot");
+        Console::reset();
+    }
+
     public function testSuccessOutput()
     {
         Console::success("Success");
