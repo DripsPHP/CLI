@@ -3,11 +3,26 @@
 namespace tests;
 
 use Drips\CLI\Command;
+use Drips\CLI\ICommand;
 use PHPUnit_Framework_TestCase;
 
 require_once __DIR__.'/../src/console.php';
 require_once __DIR__.'/../src/command.php';
-require_once __DIR__.'/TestCommand.php';
+require_once __DIR__.'/../src/icommand.php';
+
+abstract class TestCommand implements ICommand
+{
+    public static function command1($param = "")
+    {
+        echo "TestCommand: $param";
+    }
+
+    public static function help()
+    {
+        echo "TestCommand: HELP";
+    }
+}
+
 
 class TestCommands extends PHPUnit_Framework_TestCase
 {
