@@ -1,0 +1,14 @@
+{
+    "name": "Prowect/Drips/CLI",
+    "description": "PHP-Library zur vereinfachten Interaktion für mit der Konsole.",
+    "keywords": ["cli","console"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CLI": "src"
+        }
+    }
+}
