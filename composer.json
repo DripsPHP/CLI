@@ -1,5 +1,5 @@
 {
-    "name": "Drips/CLI",
+    "name": "drips/cli",
     "description": "PHP-Library zur vereinfachten Interaktion für mit der Konsole.",
     "keywords": ["cli","console"],
     "license": "MIT",
