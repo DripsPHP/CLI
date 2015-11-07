@@ -1,5 +1,5 @@
 {
-    "name": "Prowect/Drips/CLI",
+    "name": "Drips/CLI",
     "description": "PHP-Library zur vereinfachten Interaktion für mit der Konsole.",
     "keywords": ["cli","console"],
     "license": "MIT",
