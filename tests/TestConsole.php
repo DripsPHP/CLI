@@ -5,7 +5,7 @@ namespace tests;
 use Drips\CLI\Console;
 use PHPUnit_Framework_TestCase;
 
-require_once __DIR__.'/../src/console.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 class TestConsole extends PHPUnit_Framework_TestCase
 {

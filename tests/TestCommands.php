@@ -6,9 +6,7 @@ use Drips\CLI\Command;
 use Drips\CLI\ICommand;
 use PHPUnit_Framework_TestCase;
 
-require_once __DIR__.'/../src/console.php';
-require_once __DIR__.'/../src/command.php';
-require_once __DIR__.'/../src/icommand.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 abstract class TestCommand implements ICommand
 {
