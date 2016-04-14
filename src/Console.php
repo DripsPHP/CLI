@@ -108,7 +108,7 @@ abstract class Console
    public static function write($str = "", $newLine = false)
    {
        echo $str;
-       echo $newLine ? "\n\r" : '';
+       echo $newLine ? PHP_EOL : '';
    }
 
    /**

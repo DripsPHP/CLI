@@ -26,7 +26,7 @@ class ConsoleTest extends PHPUnit_Framework_TestCase
         Console::writeln($str);
         $content = ob_get_contents();
         ob_end_clean();
-        $this->assertEquals($str."\n\r", $content);
+        $this->assertEquals($str.PHP_EOL, $content);
     }
 
     public function testBgColor()
