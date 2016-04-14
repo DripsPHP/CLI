@@ -22,7 +22,7 @@ abstract class TestCommand implements ICommand
 }
 
 
-class TestCommands extends PHPUnit_Framework_TestCase
+class CommandsTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider argsProvider
@@ -35,7 +35,7 @@ class TestCommands extends PHPUnit_Framework_TestCase
 
     public function testWithoutInterface()
     {
-        Command::register("test", TestCommands::class);
+        Command::register("test", CommandsTest::class);
         $this->assertFalse(Command::execute(array()));
     }
 

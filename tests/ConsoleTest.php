@@ -7,7 +7,7 @@ use PHPUnit_Framework_TestCase;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-class TestConsole extends PHPUnit_Framework_TestCase
+class ConsoleTest extends PHPUnit_Framework_TestCase
 {
     public function testConsoleOutput()
     {
