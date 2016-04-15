@@ -6,8 +6,6 @@ use Drips\CLI\Command;
 use Drips\CLI\ICommand;
 use PHPUnit_Framework_TestCase;
 
-require_once __DIR__.'/../vendor/autoload.php';
-
 abstract class TestCommand implements ICommand
 {
     public static function command1($param = "")
