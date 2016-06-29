@@ -67,7 +67,7 @@ abstract class Command
      */
     public static function execute(array $args)
     {
-        if(!empty($args)){
+        if(count($args) > 1){
             $command = strtolower($args[1]);
             if(!isset(static::$commands[$command])){
                 Console::error("Command ($command) not found!");
