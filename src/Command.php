@@ -83,13 +83,21 @@ abstract class Command
                 }
                 $commandClass::help();
             }
+        } else {
+            foreach(static::$commands as $command => $class){
+                Console::success($command);
+                $class_methods = get_class_methods($class);
+                foreach ($class_methods as $method_name) {
+                    Console::writeln(" - $method_name");
+                }
+            }
         }
         return false;
     }
 
     /**
      * Entfernt ein registriertes Kommando
-     * 
+     *
      * @param string $command Name des Kommandos, das entfernt werden soll
      */
     public static function unregister($command)

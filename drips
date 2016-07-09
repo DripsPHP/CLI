@@ -1,0 +1,22 @@
+<?php
+
+use Drips\CLI\Command;
+
+use Drips\CLI\ICommand;
+
+include(__DIR__.'/vendor/autoload.php');
+abstract class TestCommand implements ICommand
+{
+    public static function command1($param = "")
+    {
+        echo "TestCommand: $param";
+    }
+
+    public static function help()
+    {
+        echo "TestCommand: HELP";
+    }
+}
+Command::register("test", TestCommand::class);
+Command::register("neuer_test", TestCommand::class);
+Command::execute($argv);
