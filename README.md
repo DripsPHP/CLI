@@ -7,7 +7,6 @@
 
 ## Beschreibung
 
-Dieses Library beinhaltet Klassen zur Interaktion mit der Konsole über PHP.
-
+Diese Library beinhaltet Klassen zur Interaktion mit der Konsole über PHP.
 
 Weitere Informationen findest du im [Wiki](https://github.com/Prowect/CLI/wiki).
